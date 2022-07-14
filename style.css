@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+}
+
+#hero {
+    background: #4A5859;
+    height: 75vh;
+}
+
+#projects {
+    background: #F0EEE5;
+    height: 100vh;
+}
+
+#about {
+    background: #4A5859;
+    height: 100vh;
+}
+
+#contact {
+    background: #F0EEE5;
+    height: 100vh;
+}
