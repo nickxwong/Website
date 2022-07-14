@@ -2,22 +2,45 @@ body {
     margin: 0;
 }
 
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 60px;
+}
+
 #hero {
     background: #4A5859;
     height: 75vh;
+
+    /* h1 */
+    color: white;
 }
 
 #projects {
     background: #F0EEE5;
     height: 100vh;
+
+    /* h1 */
+    color: #4A5859;
 }
 
 #about {
     background: #4A5859;
     height: 100vh;
+
+    /* h1 */
+    color: white;
 }
 
 #contact {
     background: #F0EEE5;
     height: 100vh;
+
+    /* h1 */
+    color: #4A5859;
 }
