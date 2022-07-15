@@ -2,14 +2,18 @@ body {
     margin: 0;
 }
 
-#hero {
-    height: 90vh;
+#title {
+    height: 100vh;
     background: url(./img/background.jpg);
     background-size: auto;
     background-repeat: no-repeat;
     animation-name: background-animation;
     animation-duration: 90s;
     animation-iteration-count: infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes background-animation {
@@ -18,38 +22,61 @@ body {
     100% { background-position: top left }
 }
 
-.nav {
-    height: 10vh;
-    position: sticky;
-    top: 0;
-    background: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    transition: ease 0.5s;
-
-    /* border: 1px solid black; */
+#title p {
+    margin-bottom: -20px;
+    font-family: 'Hind', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    color: white;
 }
 
-.nav-link {
-    text-decoration: none;
-    color: black;
-    font-family: 'Roboto', sans-serif;
+#title h1 {
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 100px;
+    color: white;
+}
+
+#title h2 {
+    margin-top: -25px;
+    margin-bottom: 10px;
+    margin-left: 225px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
     font-size: 40px;
+    color: white;
+}
+
+.nav {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
     transition: ease 0.5s;
 }
 
 .pinned {
-    height: 5vh;
-    background: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.link {
+    text-decoration: none;
+    font-family: 'Hind', sans-serif;
+    font-family: 600;
+    font-size: 25px;
+    color: white;
+    transition: ease 0.5s;
 }
 
 .pinned-link {
-    color: white;
-    font-size: 20px;
+    color: black;
 }
 
-section:not(#hero) {
-    height: 100vh;
+#content {
+    height: 300vh;
     background: white;
 }

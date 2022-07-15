@@ -1,33 +1,17 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// pinned scroll effect for hero
+// resizing of header when pinned at top
 ScrollTrigger.create({
-    trigger: '#hero',
+    trigger: '.nav',
     start: 'top top',
-    pin: true,
-    pinSpacing: false,
-});
-  
-ScrollTrigger.create({
-    trigger: '#content',
-    start: 'top top',
-    end: 'top end',
-    pin: true,
-    pinSpacing: false,
-});
-
-// resizing of header when pinned
-ScrollTrigger.create({
-    trigger: '#content',
-    start: 'top top',
-    end: 'bottom bottom',
+    end: 99999,
     toggleClass: {className: 'pinned', targets: '.nav'},
 });
   
-  ScrollTrigger.create({
+ScrollTrigger.create({
     trigger: '#content',
     start: 'top top',
     end: 'bottom bottom',
-    toggleClass: {className: 'pinned-link', targets: '.nav-link'},
+    toggleClass: {className: 'pinned-link', targets: '.link'},
+    markers: true,
 });
-  
