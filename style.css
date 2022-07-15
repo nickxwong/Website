@@ -41,4 +41,5 @@ body {
 
 section:not(#hero) {
     height: 100vh;
+    background: white;
 }
