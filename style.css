@@ -4,13 +4,28 @@ body {
 
 #hero {
     height: 90vh;
+
 }
 
 #nav {
-    border: 1px solid black;
     height: 10vh;
     position: sticky;
     top: 0;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: ease 0.5s;
+
+    /* border: 1px solid black; */
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    transition: ease 0.5s;
 }
 
 section:not(#hero) {
