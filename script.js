@@ -15,3 +15,19 @@ ScrollTrigger.create({
     pin: true,
     pinSpacing: false,
 });
+
+// resizing of header when pinned
+ScrollTrigger.create({
+    trigger: '#content',
+    start: 'top top',
+    end: 'bottom bottom',
+    toggleClass: {className: 'pinned', targets: '.nav'},
+});
+  
+  ScrollTrigger.create({
+    trigger: '#content',
+    start: 'top top',
+    end: 'bottom bottom',
+    toggleClass: {className: 'pinned-link', targets: '.nav-link'},
+});
+  
