@@ -72,11 +72,15 @@ body {
     transition: ease 0.5s;
 }
 
-.pinned-link {
+.link:hover {
     color: black;
 }
 
-#content {
-    height: 300vh;
+.pinned-link {
+    color: rgb(145, 145, 145);
+}
+
+#projects {
+    height: 150vh;
     background: white;
 }
