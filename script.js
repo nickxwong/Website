@@ -18,10 +18,9 @@ ScrollTrigger.create({
 
 // highlights current section in nav
 document.querySelectorAll('section:not(#title)').forEach((section, i) => {
-    console.log(section);
     ScrollTrigger.create({
         trigger: section,
-        start: 'top top',
+        start: 'top 1%',
         end: 'bottom top',
         toggleClass: {className: 'current', targets: `a[href=\'#${section.id}\']`},
     })
