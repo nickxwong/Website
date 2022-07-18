@@ -1,7 +1,9 @@
 body {
     margin: 0;
+    background: white;
 }
 
+/* Title  */
 #title {
     height: 100vh;
     background: url(./img/background.jpg);
@@ -48,6 +50,7 @@ body {
     color: white;
 }
 
+/* Nav */
 .nav {
     width: 35%;
     display: flex;
@@ -66,7 +69,7 @@ body {
 .link {
     text-decoration: none;
     font-family: 'Hind', sans-serif;
-    font-family: 600;
+    font-weight: 600;
     font-size: 25px;
     color: white;
     transition: ease 0.5s;
@@ -84,18 +87,78 @@ body {
     color: black;
 }
 
+/* Content */
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Projects */
 #projects {
     height: 100vh;
-    background: white;
 }
 
+/* About */
 #about {
-    border: 1px solid black;
-    height: 100vh;
-    background: white;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    border-top: 1px solid black;
+    padding-top: 30px;
+    border-bottom: 1px solid black;
+    padding-bottom: 30px;
 }
 
+#about p {
+    margin: 0;
+    text-align: center;
+    font-family: 'Hind', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#skills {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#skills-container {
+    display: grid;
+    grid-template-columns: 90px 90px 90px 90px;
+    grid-template-rows: 100px 100px;
+    column-gap: 5px;
+    row-gap: 15px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .skill .caption {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+#resume {
+    display: flex;
+    gap: 25px;
+}
+
+/* Contact */
 #contact {
     height: 100vh;
-    background: white;
 }
