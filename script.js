@@ -16,3 +16,13 @@ ScrollTrigger.create({
     toggleClass: {className: 'pinned-link', targets: '.link'},
 });
 
+// highlights current section in nav
+document.querySelectorAll('section:not(#title)').forEach((section, i) => {
+    console.log(section);
+    ScrollTrigger.create({
+        trigger: section,
+        start: 'top top',
+        end: 'bottom top',
+        toggleClass: {className: 'current', targets: `a[href=\'#${section.id}\']`},
+    })
+})

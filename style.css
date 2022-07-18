@@ -80,7 +80,22 @@ body {
     color: rgb(145, 145, 145);
 }
 
+.current {
+    color: black;
+}
+
 #projects {
-    height: 150vh;
+    height: 100vh;
+    background: white;
+}
+
+#about {
+    border: 1px solid black;
+    height: 100vh;
+    background: white;
+}
+
+#contact {
+    height: 100vh;
     background: white;
 }
