@@ -8,7 +8,7 @@ body {
     background-size: auto;
     background-repeat: no-repeat;
     animation-name: background-animation;
-    animation-duration: 90s;
+    animation-duration: 180s;
     animation-iteration-count: infinite;
     display: flex;
     flex-direction: column;
@@ -17,9 +17,9 @@ body {
 }
 
 @keyframes background-animation {
-    0% { background-position: top left }
-    50% { background-position: top right }
-    100% { background-position: top left }
+    0% { background-position: 0% 55% }
+    50% { background-position: 100% 55% }
+    100% { background-position: 0% 55% }
 }
 
 #title p {
