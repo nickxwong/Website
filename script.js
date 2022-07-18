@@ -14,12 +14,5 @@ ScrollTrigger.create({
     endTrigger: '#content',
     end: 'bottom 99%',
     toggleClass: {className: 'pinned-link', targets: '.link'},
-    markers: true,
 });
 
-const links = document.querySelectorAll('.link');
-links.forEach((link, i) => {link.addEventListener('click', () => {
-        console.log("clicked");
-        links.forEach((link, i) => {link.classList.add('pinned-link')});
-    });
-});
