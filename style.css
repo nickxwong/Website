@@ -88,7 +88,6 @@ body {
 }
 
 /* Content */
-
 #content {
     display: flex;
     flex-direction: column;
@@ -102,7 +101,7 @@ body {
 
 /* About */
 #about {
-    width: 50vw;
+    width: 60vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -160,5 +159,95 @@ body {
 
 /* Contact */
 #contact {
-    height: 100vh;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 55vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#title-text p {
+    margin: 0;
+    font-family: 'Hind', sans-serif;
+    font-weight: 600;
+    font-size: 27px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input {
+    height: 2rem;
+}
+
+form input,
+form textarea {
+    border: 2px solid black;
+    /* text */
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 'Hind', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+form input::placeholder, 
+form textarea::placeholder {
+    font-family: 'Hind', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+form .row {
+    display: flex;
+}
+
+form .row#top {
+    justify-content: space-between;
+    gap: 45px;
+}
+
+.row#top input#name-input {
+    flex-grow: 8;
+}
+
+.row#top button#submit {
+    flex-grow: 1;
+    background: black;
+    outline: none;
+    /* text */
+    color: white;
+    font-family: 'Hind', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.row#middle input#email-input,
+.row#middle input#message-input {
+    flex: 1;
+}
+
+#socials {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+#socials p {
+    margin: 0;
+    font-family: 'Hind', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#socials a {
+    color: black;
+}
+
+#socials a:hover {
+    color: rgb(75, 75, 75);
 }
