@@ -57,13 +57,17 @@ body {
     justify-content: space-around;
     position: sticky;
     top: 0;
-    transition: ease 0.5s;
 }
 
 .pinned {
+    transition: ease 0.5s;
     position: fixed;
     top: 0;
     width: 100%;
+}
+
+.opaque {
+    background: rgb(255, 255, 255);
 }
 
 .link {
@@ -80,7 +84,7 @@ body {
 }
 
 .pinned-link {
-    color: rgb(145, 145, 145);
+    color: rgba(0, 0, 0, 0.411);
 }
 
 .current {

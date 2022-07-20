@@ -9,6 +9,13 @@ ScrollTrigger.create({
 });
 
 ScrollTrigger.create({
+    trigger: '#projects',
+    start: 'top top',
+    end: 99999,
+    toggleClass: {className: 'opaque', targets: '.nav'},
+});
+
+ScrollTrigger.create({
     trigger: '#title',
     start: 'bottom 1%',
     endTrigger: '#content',
