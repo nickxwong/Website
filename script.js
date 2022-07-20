@@ -24,15 +24,6 @@ ScrollTrigger.create({
 });
 
 // highlights current section in nav
-// document.querySelectorAll('section:not(#title)').forEach((section, i) => {
-//     ScrollTrigger.create({
-//         trigger: section,
-//         start: 'top 1%',
-//         end: 'bottom top',
-//         toggleClass: {className: 'current', targets: `a[href=\'#${section.id}\']`},
-//     })
-// });
-
 // projects
 ScrollTrigger.create({
     trigger: '#content',
