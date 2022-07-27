@@ -267,3 +267,8 @@ form .row#top {
 #socials a:hover {
     color: rgb(75, 75, 75);
 }
+
+/* footer */
+#footer {
+    height: 12vh;
+}
