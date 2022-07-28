@@ -2,12 +2,14 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Nicolas Wong</title>
         <link rel="stylesheet" href="style.css">
         <!-- fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Hind:wght@500;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Hind:wght@500;600&family=Oswald:wght@500;700&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
         <!-- Icons -->
         <script src="https://kit.fontawesome.com/b8ed48a0db.js" crossorigin="anonymous"></script>
     </head>
@@ -22,54 +24,58 @@
                 <a href="#contact" class="link">contact</a>
             </div>
         </section>
-        <!-- <div id="content">
+        <div id="content">
             <section id="projects">
                 <div class="project" id="p-one">Project 1</div>
                 <div class="project" id="p-two">Project 2</div>
                 <div class="project" id="p-three">Project 3</div>
                 <div class="project" id="p-four">Project 4</div>
             </section>
-            <section id="about">
+            <section id="about"> 
                 <div id="intro">
                     <p>Hello! I'm a full stack developer and graduate from the University of Washington's Graduate Certificate in
-                    Software<br>Design & Development program. I have a passion for creating great-looking and highly-functional 
+                    Software Design & Development program. I have a passion for creating great-looking and highly-functional 
                     things out of code.</p>
                     <p>When I'm not in front of my computer, I enjoy lifting weights, watching movies, and going on roadtrips.</p>
                 </div>
                 <div id="skills">
                     <p>These are some of the tools I use:</p>
                     <div id="skills-container">
-                        <div class="skill" id="java">
-                            <i class="fa-brands fa-java fa-4x"></i>
-                            <p class="caption">Java</p>
+                        <div class="skill-row" id="row-one">
+                            <div class="skill" id="icon-java">
+                                <i class="fa-brands fa-java fa-2xl"></i>
+                                <p class="caption">Java</p>
+                            </div>
+                            <div class="skill" id="icon-cpp">
+                                <i class="fa-solid fa-c fa-2xl"></i>
+                                <p class="caption">C++</p>
+                            </div>
+                            <div class="skill" id="icon-html">
+                                <i class="fa-brands fa-html5 fa-2xl"></i>
+                                <p class="caption">HTML</p>
+                            </div>
+                            <div class="skill" id="icon-css">
+                                <i class="fa-brands fa-css3 fa-2xl"></i>
+                                <p class="caption">CSS</p>
+                            </div>    
                         </div>
-                        <div class="skill" id="cpp">
-                            <i class="fa-solid fa-c fa-4x"></i>
-                            <p class="caption">C++</p>
-                        </div>
-                        <div class="skill" id="html">
-                            <i class="fa-brands fa-html5 fa-4x"></i>
-                            <p class="caption">HTML</p>
-                        </div>
-                        <div class="skill" id="css">
-                            <i class="fa-brands fa-css3 fa-4x"></i>
-                            <p class="caption">CSS</p>
-                        </div>
-                        <div class="skill" id="javascript">
-                            <i class="fa-brands fa-js fa-4x"></i>
-                            <p class="caption">JavaScript</p>
-                        </div>
-                        <div class="skill" id="python">
-                            <i class="fa-brands fa-python fa-4x"></i>
-                            <p class="caption">Python</p>
-                        </div>
-                        <div class="skill" id="git">
-                            <i class="fa-brands fa-git fa-4x"></i>
-                            <p class="caption">Git</p>
-                        </div>
-                        <div class="skill" id="figma">
-                            <i class="fa-brands fa-figma fa-4x"></i>
-                            <p class="caption">Figma</p>
+                        <div class="skill-row" id="row-two">
+                            <div class="skill" id="icon-js">
+                                <i class="fa-brands fa-js fa-2xl"></i>
+                                <p class="caption">JavaScript</p>
+                            </div>
+                            <div class="skill" id="icon-py">
+                                <i class="fa-brands fa-python fa-2xl"></i>
+                                <p class="caption">Python</p>
+                            </div>
+                            <div class="skill" id="icon-git">
+                                <i class="fa-brands fa-git fa-2xl"></i>
+                                <p class="caption">Git</p>
+                            </div>
+                            <div class="skill" id="icon-fig">
+                                <i class="fa-brands fa-figma fa-2xl"></i>
+                                <p class="caption">Figma</p>
+                            </div>    
                         </div>
                     </div>
                 </div>
@@ -86,31 +92,33 @@
                     <form action="">
                         <div class="row" id="top">
                             <input type="text" id="name-input" name="name" placeholder="Name*" required>
-                            <button id="submit" type="submit">Send</button>        
+                            <button id="submit-button" type="submit">Send</button>        
                         </div>
                         <div class="row" id="middle">
                             <input type="text" id="email-input" type="email" name="email" placeholder="Email*" required>    
                         </div>
                         <div class="row" id="bottom">
-                            <textarea name="message" id="message-input" cols="120" rows="15" placeholder="Message*" required></textarea>    
+                            <textarea name="message" id="message-input" placeholder="Message*" required></textarea>    
                         </div>
                     </form>
                 </div>
                 <div id="socials">
                     <p>Or connect with me on these platforms:</p>
-                    <a href="https://www.linkedin.com/in/nicolas-wong-981550236" target="_blank">
-                        <i class="fa-brands fa-linkedin fa-2x"></i>     
-                    </a>
-                    <a href="mailto:nicolaswong01@gmail.com">
-                        <i class="fa-solid fa-envelope fa-2x"></i> 
-                    </a>
-                    <a href="https://www.github.com/nickxwong" target="_blank">
-                        <i class="fa-brands fa-github fa-2x"></i>  
-                    </a>
+                    <div id="social-icons">
+                        <a href="https://www.linkedin.com/in/nicolas-wong-981550236" target="_blank">
+                            <i class="fa-brands fa-linkedin fa-2x"></i>     
+                        </a>
+                        <a href="mailto:nicolaswong01@gmail.com">
+                            <i class="fa-solid fa-envelope fa-2x"></i> 
+                        </a>
+                        <a href="https://www.github.com/nickxwong" target="_blank">
+                            <i class="fa-brands fa-github fa-2x"></i>  
+                        </a>    
+                    </div>
                 </div>
             </section>
         </div>
-        <section id="footer"></section> -->
+        <section id="footer"></section>
         <!-- JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>

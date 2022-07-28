@@ -1,80 +1,82 @@
+:root {
+    --fs-h1: 5.5rem;
+    --fs-h2: 2.25rem;
+    --fs-p: 1.75rem;
+    --fs-link: 1.75rem;
+}
+
 body {
     margin: 0;
     background: white;
 }
 
-/* Title  */
+button {
+    background: black;
+    border: none;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+button:hover {
+    background: rgb(75, 75, 75);
+}
+
+/* title */
 #title {
     height: 100vh;
+
+    /* background: skyblue; */
     background: url(./img/background.jpg);
+    background-position: 80% 55%;
     background-size: auto;
     background-repeat: no-repeat;
-    animation-name: background-animation;
-    animation-duration: 180s;
-    animation-iteration-count: infinite;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-@keyframes background-animation {
-    0% { background-position: 0% 55% }
-    50% { background-position: 100% 55% }
-    100% { background-position: 0% 55% }
+    color: white;
 }
 
 #title p {
-    margin-bottom: -20px;
-    font-family: 'Hind', sans-serif;
-    font-weight: 600;
-    font-size: 25px;
-    color: white;
+    margin-bottom: -15px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: var(--fs-p);
 }
 
 #title h1 {
     margin: 0;
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
-    font-size: 100px;
-    color: white;
+    font-size: var(--fs-h1);
 }
 
 #title h2 {
     margin-top: -25px;
     margin-bottom: 10px;
-    margin-left: 225px;
+    margin-left: 200px;
     font-family: 'Oswald', sans-serif;
     font-weight: 500;
-    font-size: 40px;
-    color: white;
+    font-size: var(--fs-h2);
 }
 
-/* Nav */
+/* nav */
 .nav {
-    width: 35%;
+    width: 35em;
     display: flex;
     justify-content: space-around;
     position: sticky;
     top: 0;
 }
 
-.pinned {
-    transition: ease 0.5s;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-.opaque {
-    background: rgb(255, 255, 255);
-}
-
 .link {
     text-decoration: none;
-    font-family: 'Hind', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: 600;
-    font-size: 25px;
+    font-size: var(--fs-link);
     color: white;
     transition: ease 0.5s;
 }
@@ -83,15 +85,7 @@ body {
     color: black;
 }
 
-.pinned-link {
-    color: rgba(0, 0, 0, 0.411);
-}
-
-.current {
-    color: black;
-}
-
-/* Content */
+/* content */
 #content {
     display: flex;
     flex-direction: column;
@@ -99,13 +93,12 @@ body {
     gap: 10vh;
 }
 
-/* Projects */
+/* projects */
 #projects {
-    width: 85vw;
     margin-top: 10vh;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(750px, 1fr));
-    grid-template-rows: repeat(2, 500px);
+    grid-template-columns: repeat(2, 45vw);
+    grid-template-rows: repeat(2, calc(0.67 * 45vw));
     gap: 15px;
 }
 
@@ -116,83 +109,104 @@ body {
     align-items: center;
 }
 
-/* About */
+/* about */
 #about {
-    width: 60vw;
+    width: 75vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 35px;
+    gap: 4vh;
     border-top: 1px solid black;
-    padding-top: 30px;
+    padding: 3vh 0vh;
     border-bottom: 1px solid black;
-    padding-bottom: 30px;
 }
 
 #about p {
     margin: 0;
     text-align: center;
-    font-family: 'Hind', sans-serif;
-    font-weight: 600;
-    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: calc(0.8 * var(--fs-p));
 }
 
 #intro {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 3vh;
 }
 
 #skills {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 1vh;
 }
 
 #skills-container {
-    display: grid;
-    grid-template-columns: 90px 90px 90px 90px;
-    grid-template-rows: 100px 100px;
-    column-gap: 5px;
-    row-gap: 15px;
-}
-
-.skill {
+    width: 25em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1em;
+}
+
+.skill-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
 }
 
 #about .skill .caption {
-    font-weight: 500;
-    font-size: 18px;
+    font-weight: 400;
+    font-size: 0.65em;
 }
 
 #resume {
     display: flex;
-    gap: 25px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.9em;
 }
 
-/* Contact */
+#resume button {
+    width: 5em;
+    height: 1.75em;
+}
+
+/* contact */
 #contact {
-    width: 55vw;
+    width: 65vw;
     display: flex;
     flex-direction: column;
+    gap: 0.75vh;
     margin-bottom: 7vh;
 }
 
 #title-text p {
     margin: 0;
-    font-family: 'Hind', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: 600;
-    font-size: 27px;
+    font-size: calc(1.25 * var(--fs-p));
 }
 
-#contact form {
+form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 0.75em;
+}
+
+form .row {
+    display: flex;
 }
 
 form input {
@@ -201,53 +215,45 @@ form input {
 
 form input,
 form textarea {
-    border: 2px solid black;
-    /* text */
-    padding-left: 5px;
-    padding-right: 5px;
-    font-size: 'Hind', sans-serif;
-    font-weight: 500;
-    font-size: 15px;
-}
-
-form input::placeholder, 
-form textarea::placeholder {
-    font-family: 'Hind', sans-serif;
-    font-weight: 500;
+    border: 1px solid black;
+    padding-left: 1%;
+    padding-right: 1%;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
     font-size: 1rem;
 }
 
-form .row {
-    display: flex;
+form input::placeholder,
+form textarea::placeholder {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
 }
 
-form .row#top {
+.row {
+    width: 100%;
+}
+
+.row#top {
     justify-content: space-between;
-    gap: 45px;
+    gap: 1vw;
 }
 
-.row#top input#name-input {
-    flex-grow: 8;
+#name-input {
+    width: 100%;
 }
 
-.row#top button#submit {
-    flex-grow: 1;
-    background: black;
-    outline: none;
-    /* text */
-    color: white;
-    font-family: 'Hind', sans-serif;
-    font-weight: 500;
-    font-size: 15px;
+#email-input,
+#message-input {
+    width: 100%;
 }
 
-.row#middle input#email-input,
-.row#middle input#message-input {
-    flex: 1;
+#message-input {
+    height: 20rem;
+    padding-top: 0.75%;
 }
 
 #socials {
-    margin-top: 10px;
     display: flex;
     align-items: center;
     gap: 2vw;
@@ -255,20 +261,111 @@ form .row#top {
 
 #socials p {
     margin: 0;
-    font-family: 'Hind', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: 600;
-    font-size: 20px;
+    font-size: calc(0.75 * var(--fs-p));
 }
 
-#socials a {
+#social-icons {
+    display: flex;
+    gap: 1.5vw;
+}
+
+#social-icons a {
     color: black;
 }
 
-#socials a:hover {
+#social-icons a:hover {
     color: rgb(75, 75, 75);
 }
 
 /* footer */
 #footer {
     height: 12vh;
+    background: rgb(231, 231, 231);
 }
+
+/* media queries */
+@media (min-width: 140em) {
+    #title {
+        background-size: cover;
+    }
+}
+
+@media (max-width: 75em) {
+    #projects {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project {
+        width: 80vw;
+        height: calc(0.67 * 80vw);
+    }
+}
+
+@media (max-width: 52em) {
+
+    #socials {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #social-icons {
+        width: 100%;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 35em) {
+    :root {
+        --fs-h1: 3.75rem;
+        --fs-h2: 1.75rem;
+        --fs-p: 1.5rem;
+        --fs-link: 1.25rem;
+    }
+
+    #title h2 {
+        margin-top: -15px;
+        margin-left: 110px;
+    }
+    
+    .nav {
+        width: 25em;
+    }
+
+    #skills-container {
+        width: 20em;
+    }
+
+    .skill {
+        font-size: 24px;
+    }
+} 
+
+@media (max-width: 22em) {
+    :root {
+        --fs-h1: 3rem;
+        --fs-h2: 1.5rem;
+        --fs-p: 1.25rem;
+        --fs-link: 1rem;
+    }
+    
+    #title h2 {
+        margin-top: -15px;
+        margin-left: 90px;
+    }
+
+    .nav {
+        width: 20em;
+    }
+
+    #skills-container {
+        width: 15em;
+    }
+
+    .skill {
+        font-size: 18px;
+    }
+} 
