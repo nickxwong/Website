@@ -84,7 +84,7 @@ button:hover {
 }
 
 .link {
-    text-decoration: none;
+    margin: 0;
     font-family: 'Rubik', sans-serif;
     font-weight: 600;
     font-size: var(--fs-link);
@@ -94,6 +94,7 @@ button:hover {
 
 .link:hover {
     color: black;
+    cursor: pointer;
 }
 
 .pinned-link {
@@ -105,12 +106,11 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10vh;
 }
 
 /* projects */
 #projects {
-    margin-top: 10vh;
+    padding-top: 10vh;
     display: grid;
     grid-template-columns: repeat(2, 45vw);
     grid-template-rows: repeat(2, calc(0.67 * 45vw));
@@ -126,6 +126,10 @@ button:hover {
 
 /* about */
 #about {
+    padding-top: 10vh;
+}
+
+#about-container {
     width: 75vw;
     display: flex;
     flex-direction: column;
@@ -133,7 +137,7 @@ button:hover {
     gap: 4vh;
     border-top: 1px solid black;
     padding: 3vh 0vh;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid black;    
 }
 
 #about p {
@@ -200,6 +204,7 @@ button:hover {
 
 /* contact */
 #contact {
+    padding-top: 10vh;
     width: 65vw;
     display: flex;
     flex-direction: column;

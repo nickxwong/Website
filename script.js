@@ -22,3 +22,10 @@ ScrollTrigger.create({
     end: 'top 70%',
     toggleClass: {className: 'pinned-link', targets: '.link'},
 });
+
+// ScrollTo animations
+document.querySelectorAll('.link').forEach(link => {
+    link.addEventListener('click', () => {
+        gsap.to(window, {scrollTo: `#${link.textContent}`});    
+    })
+})
