@@ -303,6 +303,14 @@ form textarea::placeholder {
 #footer {
     height: 12vh;
     background: rgb(231, 231, 231);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer a {
+    color: black;
 }
 
 /* media queries */
