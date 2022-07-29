@@ -13,6 +13,7 @@ body {
 button {
     background: black;
     border: none;
+    /* Text */
     color: white;
     font-family: 'Rubik', sans-serif;
     font-weight: 600;
@@ -23,48 +24,44 @@ button:hover {
     background: rgb(75, 75, 75);
 }
 
-/* title */
-#title {
+/* Section: Title */
+section#title {
     height: 100vh;
-
-    /* background: skyblue; */
     background: url(./img/background.jpg);
     background-position: 80% 55%;
     background-size: auto;
     background-repeat: no-repeat;
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* Text */
     color: white;
 }
 
-#title p {
+section#title p {
     margin-bottom: -15px;
     font-family: 'Rubik', sans-serif;
     font-weight: 500;
     font-size: var(--fs-p);
 }
 
-#title h1 {
+section#title h1 {
     margin: 0;
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
     font-size: var(--fs-h1);
 }
 
-#title h2 {
-    margin-top: -25px;
-    margin-bottom: 10px;
-    margin-left: 200px;
+section#title h2 {
+    margin: -25px 0 10px 200px;
     font-family: 'Oswald', sans-serif;
     font-weight: 500;
     font-size: var(--fs-h2);
 }
 
-/* nav */
-.nav {
+/* Header */
+.header {
     width: 35em;
     display: flex;
     justify-content: space-around;
@@ -83,7 +80,7 @@ button:hover {
     background: rgba(255, 255, 255, 0.568);
 }
 
-.link {
+.header > .link {
     margin: 0;
     font-family: 'Rubik', sans-serif;
     font-weight: 600;
@@ -92,24 +89,25 @@ button:hover {
     transition: ease 0.5s;
 }
 
-.link:hover {
-    color: black;
+.header > .link:hover {
     cursor: pointer;
-}
-
-.pinned-link {
     color: black;
 }
 
-/* content */
-#content {
+.header > .pinned-link {
+    color: black;
+    
+}
+
+/* Content */
+#website-content {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* projects */
-#projects {
+/* Section: Projects */
+section#projects {
     padding-top: 10vh;
     display: grid;
     grid-template-columns: repeat(2, 45vw);
@@ -117,30 +115,30 @@ button:hover {
     gap: 15px;
 }
 
-.project {
+section#projects > .project {
     border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* about */
-#about {
+/* Section: About */
+section#about {
     padding-top: 10vh;
 }
 
-#about-container {
+section#about > .container {
     width: 75vw;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black; 
+    padding: 3vh 0vh; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4vh;
-    border-top: 1px solid black;
-    padding: 3vh 0vh;
-    border-bottom: 1px solid black;    
+    gap: 4vh; 
 }
 
-#about p {
+section#about p {
     margin: 0;
     text-align: center;
     font-family: 'Rubik', sans-serif;
@@ -148,19 +146,19 @@ button:hover {
     font-size: calc(0.8 * var(--fs-p));
 }
 
-#intro {
+section#about #intro {
     display: flex;
     flex-direction: column;
     gap: 3vh;
 }
 
-#skills {
+section#about #skills {
     display: flex;
     flex-direction: column;
     gap: 1vh;
 }
 
-#skills-container {
+section#about #skills > .container {
     width: 25em;
     display: flex;
     flex-direction: column;
@@ -169,27 +167,28 @@ button:hover {
     gap: 1em;
 }
 
-.skill-row {
+section#about #skills .row {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.skill {
+section#about #skills .skill {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* Text */
     font-size: 30px;
 }
 
-#about .skill .caption {
+section#about #skills .caption {
     font-weight: 400;
     font-size: 0.65em;
 }
 
-#resume {
+section#about #resume {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -197,13 +196,13 @@ button:hover {
     gap: 0.9em;
 }
 
-#resume button {
+section#about #resume button {
     width: 5em;
     height: 1.75em;
 }
 
-/* contact */
-#contact {
+/* Section: Contact */
+section#contact {
     padding-top: 10vh;
     width: 65vw;
     display: flex;
@@ -212,95 +211,85 @@ button:hover {
     margin-bottom: 7vh;
 }
 
-#title-text p {
+section#contact > p {
     margin: 0;
     font-family: 'Rubik', sans-serif;
     font-weight: 600;
     font-size: calc(1.25 * var(--fs-p));
 }
 
-form {
+section#contact > form {
     display: flex;
     flex-direction: column;
     gap: 0.75em;
 }
 
-form .row {
+section#contact > form > .row {
     display: flex;
-}
-
-form input {
-    height: 2rem;
-}
-
-form input,
-form textarea {
-    border: 1px solid black;
-    padding-left: 1%;
-    padding-right: 1%;
-    font-family: 'Rubik', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-}
-
-form input::placeholder,
-form textarea::placeholder {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-}
-
-.row {
     width: 100%;
 }
 
-.row#top {
+section#contact > form > .row#top {
     justify-content: space-between;
     gap: 1vw;
 }
 
-#name-input {
-    width: 100%;
+section#contact > form input {
+    height: 2rem;
 }
 
-#email-input,
-#message-input {
+section#contact > form input,
+section#contact > form textarea {
     width: 100%;
+    border: 1px solid black;
+    padding-left: 1%;
+    padding-right: 1%;
+    /* Text */
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
 }
 
-#message-input {
+section#contact > form input::placeholder,
+section#contact > form textarea::placeholder {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+section#contact > form #message-input {
     height: 20rem;
     padding-top: 0.75%;
 }
 
-#socials {
+section#contact > #social-networks {
     display: flex;
     align-items: center;
     gap: 2vw;
 }
 
-#socials p {
+section#contact > #social-networks > p {
     margin: 0;
     font-family: 'Rubik', sans-serif;
     font-weight: 600;
     font-size: calc(0.75 * var(--fs-p));
 }
 
-#social-icons {
+section#contact #social-icons {
     display: flex;
     gap: 1.5vw;
 }
 
-#social-icons a {
+section#contact #social-icons > a {
     color: black;
 }
 
-#social-icons a:hover {
+section#contact #social-icons > a:hover {
     color: rgb(75, 75, 75);
 }
 
-/* footer */
-#footer {
+/* Section: Footer */
+section#footer {
     height: 12vh;
     background: rgb(231, 231, 231);
     display: flex;
@@ -309,38 +298,37 @@ form textarea::placeholder {
     align-items: center;
 }
 
-#footer a {
+section#footer a {
     color: black;
 }
 
-/* media queries */
+/* Media Queries */
 @media (min-width: 140em) {
-    #title {
+    section#title {
         background-size: cover;
     }
 }
 
 @media (max-width: 75em) {
-    #projects {
+    section#projects {
         display: flex;
         flex-direction: column;
     }
 
-    .project {
+    section#projects > .project {
         width: 80vw;
         height: calc(0.67 * 80vw);
     }
 }
 
 @media (max-width: 52em) {
-
-    #socials {
+    section#contact #social-networks {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
-    #social-icons {
+    section#contact #social-icons {
         width: 100%;
         justify-content: space-around;
     }
@@ -354,20 +342,20 @@ form textarea::placeholder {
         --fs-link: 1.25rem;
     }
 
-    #title h2 {
+    section#title h2 {
         margin-top: -15px;
         margin-left: 110px;
     }
     
-    .nav {
+    .header {
         width: 25em;
     }
 
-    #skills-container {
+    section#about #skills > .container {
         width: 20em;
     }
 
-    .skill {
+    section#about #skills .skill {
         font-size: 24px;
     }
 } 
@@ -380,20 +368,20 @@ form textarea::placeholder {
         --fs-link: 1rem;
     }
     
-    #title h2 {
+    section#title h2 {
         margin-top: -15px;
         margin-left: 90px;
     }
 
-    .nav {
+    .header {
         width: 20em;
     }
 
-    #skills-container {
+    section#about #skills > .container {
         width: 15em;
     }
 
-    .skill {
+    section#about #skills .skill {
         font-size: 18px;
     }
 } 

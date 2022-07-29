@@ -18,21 +18,21 @@
             <p>Hello! My name is</p>
             <h1>Nicolas Wong</h1>
             <h2>full stack developer</h2>
-            <div class="nav">
+            <div class="header">
                 <p class="link">projects</p>
                 <p class="link">about</p>
                 <p class="link">contact</p>
             </div>
         </section>
-        <div id="content">
+        <div id="website-content">
             <section id="projects">
-                <div class="project" id="p-one">Project 1</div>
-                <div class="project" id="p-two">Project 2</div>
-                <div class="project" id="p-three">Project 3</div>
-                <div class="project" id="p-four">Project 4</div>
+                <div class="project" id="project-one">Project 1</div>
+                <div class="project" id="project-two">Project 2</div>
+                <div class="project" id="project-three">Project 3</div>
+                <div class="project" id="project-four">Project 4</div>
             </section>
             <section id="about"> 
-                <div id="about-container">
+                <div class="container">
                     <div id="intro">
                         <p>Hello! I'm a full stack developer and graduate from the University of Washington's Graduate Certificate in
                         Software Design & Development program. I have a passion for creating great-looking and highly-functional 
@@ -41,8 +41,8 @@
                     </div>
                     <div id="skills">
                         <p>These are some of the tools I use:</p>
-                        <div id="skills-container">
-                            <div class="skill-row" id="row-one">
+                        <div class="container">
+                            <div class="row" id="row-one">
                                 <div class="skill" id="icon-java">
                                     <i class="fa-brands fa-java fa-2xl"></i>
                                     <p class="caption">Java</p>
@@ -60,7 +60,7 @@
                                     <p class="caption">CSS</p>
                                 </div>    
                             </div>
-                            <div class="skill-row" id="row-two">
+                            <div class="row" id="row-two">
                                 <div class="skill" id="icon-js">
                                     <i class="fa-brands fa-js fa-2xl"></i>
                                     <p class="caption">JavaScript</p>
@@ -87,24 +87,20 @@
                 </div>
             </section>
             <section id="contact">
-                <div id="title-text">
-                    <p>Want to get in touch?</p>
-                </div>
-                <div id="contact-form">
-                    <form action="">
-                        <div class="row" id="top">
-                            <input type="text" id="name-input" name="name" placeholder="Name*" required>
-                            <button id="submit-button" type="submit">Send</button>        
-                        </div>
-                        <div class="row" id="middle">
-                            <input type="text" id="email-input" type="email" name="email" placeholder="Email*" required>    
-                        </div>
-                        <div class="row" id="bottom">
-                            <textarea name="message" id="message-input" placeholder="Message*" required></textarea>    
-                        </div>
-                    </form>
-                </div>
-                <div id="socials">
+                <p>Want to get in touch?</p>
+                <form action="">
+                    <div class="row" id="top">
+                        <input type="text" id="name-input" name="name" placeholder="Name*" required>
+                        <button id="submit-button" type="submit">Send</button>        
+                    </div>
+                    <div class="row" id="middle">
+                        <input type="text" id="email-input" type="email" name="email" placeholder="Email*" required>    
+                    </div>
+                    <div class="row" id="bottom">
+                        <textarea name="message" id="message-input" placeholder="Message*" required></textarea>    
+                    </div>
+                </form>
+                <div id="social-networks">
                     <p>Or connect with me on these platforms:</p>
                     <div id="social-icons">
                         <a href="https://www.linkedin.com/in/nicolas-wong-981550236" target="_blank">
