@@ -27,7 +27,7 @@ button:hover {
 /* Section: Title */
 section#title {
     height: 100vh;
-    background: url(./img/background.jpg);
+    background: url(../img/background.jpg);
     background-position: 80% 55%;
     background-size: auto;
     background-repeat: no-repeat;
@@ -72,12 +72,14 @@ section#title h2 {
 
 .pinned {
     position: fixed;
+    z-index: 2;
     top: 0;
     width: 100%;
 }
 
 .opaque {
-    background: rgba(255, 255, 255, 0.568);
+    background: rgb(255, 255, 255);
+    height: 2em;
 }
 
 .header > .link {
@@ -116,10 +118,28 @@ section#projects {
 }
 
 section#projects > .project {
-    border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+section#projects > .project .thumbnail {
+    height: 100%;
+    width: 100%;
+    transition: 0.3s ease;
+}
+
+section#projects > .project .thumbnail:hover {
+    opacity: 0;
+}
+
+section#projects > .project > .title {
+    position: absolute;
+    z-index: -1;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: var(--fs-h2);
 }
 
 /* Section: About */
