@@ -94,12 +94,10 @@ section#title h2 {
 
 .header > .link:hover {
     cursor: pointer;
-    color: black;
 }
 
 .header > .pinned-link {
     color: black;
-    
 }
 
 /* Content */
