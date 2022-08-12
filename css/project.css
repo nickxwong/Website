@@ -6,6 +6,24 @@ body {
     font-family: 'Rubik', sans-serif;
 }
 
+h1 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 2.1rem;
+}
+
+p {
+    margin: 0;
+    line-height: 1.75rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
 #nav {
     position: fixed;
     top: 100px;
@@ -20,17 +38,6 @@ body {
     gap: 2vh;
 }
 
-img {
-    height: auto;
-    width: 100%;
-}
-
-h1 {
-    margin: 0;
-    font-weight: 600;
-    font-size: 2.1rem;
-}
-
 #tech {
     display: flex;
     flex-wrap: wrap;
@@ -43,17 +50,10 @@ h1 {
     font-size: 1.4rem;
 }
 
-#content {
+#intro {
     display: flex;
     flex-direction: column;
     gap: 1.25vh;
-}
-
-#content p {
-    margin: 0;
-    line-height: 1.75rem;
-    font-weight: 500;
-    font-size: 1.2rem;
 }
 
 #external-links {
@@ -81,6 +81,14 @@ h1 {
 #external-links button:hover {
     cursor: pointer;
     background: rgb(75, 75, 75);
+}
+
+hr {
+    width: 100%;
+}
+
+#walkthrough h2 {
+    font-size: 1.8rem;
 }
 
 @media (max-width: 67em) {

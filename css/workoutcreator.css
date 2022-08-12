@@ -1,0 +1,61 @@
+#walkthrough {
+    display: flex;
+    flex-direction: column;
+}
+
+#walkthrough h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+#walkthrough .section:not(.center) {
+    padding-bottom: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#walkthrough .section:not(.center) .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 45%;
+}
+
+#walkthrough .section:not(.center) img {
+    height: auto;
+    width: 50%;
+}
+
+#exercise-list .content {
+    text-align: right;
+}
+
+#workout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+#workout .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (max-width: 55em) {
+    #walkthrough .section {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+    }
+
+    #walkthrough .section:not(.center) img,
+    #walkthrough .section:not(.center) .content {
+        width: 100%;
+    }
+
+    #exercise-list .content {
+        text-align: left;
+    }
+}

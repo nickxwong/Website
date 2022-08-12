@@ -1,40 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>listentogether</title>
-    <link rel="stylesheet" href="../css/project.css">
-</head>
-<body>
-    <div id="container">
-        <img src="../img/projects/listentogether.png">
-        <h1>listentogether</h1>
-        <div id="tech">
-            <p>HTML</p>
-            <p>CSS</p>
-            <p>JavaScript</p>
-            <p>Spotify API</p>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>listentogether</title>
+        <link rel="stylesheet" href="../css/project.css">
+    </head>
+    <body>
+        <div id="container">
+            <img src="../img/projects/listentogether/lt_thumbnail.png">
+            <h1>listentogether</h1>
+            <div id="tech">
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>JavaScript</p>
+                <p>Spotify API</p>
+            </div>
+            <div id="intro">
+                <p>With listentogether, two Spotify users can connect their accounts and get a playlist out of the tracks both accounts have saved.</p>
+                <p>This project was inspired by my love of roadtrips. Have you ever gone on a roadtrip with other people and not known what music to 
+                play? Sure, introducing each other to new music is always fun, but sometimes you just want to make sure that the music playing is 
+                something that everyone can enjoy.</p>
+                <p>On the front-end, listentogether was created purely with HTML and CSS. The back-end, which is all handled by the browser, is 
+                vanilla JavaScript that obviously makes heavy use of the Spotify API to connect user accounts, retrieve their libraries, and save the
+                playlists directly onto their profiles.</p>
+            </div>
+            <div id="external-links">
+                <a href="https://github.com/nickxwong/listentogether" target="_blank">
+                    <button>Source Code</button>    
+                </a>
+                <a href="https://nickxwong.github.io/listentogether/" target="_blank">
+                    <button>Live Preview</button>    
+                </a>
+            </div>    
+            <hr />
+            <div id="walkthrough">
+                <h2>Project walkthrough</h2>
+                <div id="account-connection">
+                    <img src="../img/projects/listentogether/AccountConnection.png" alt="">
+                    <h2>Step 1: Account connection</h2>
+                    <p>Users can connect their Spotify accounts to the application by clicking on the squares. This will bring them to a login page
+                       with Spotify. This login page will also specify the specific permissions listentogether will need to be granted, specifically
+                       viewing account data, viewing libraries, and creating playlists.</p>
+                       <br>
+                    <img src="../img/projects/listentogether/SpotifyLogin.png" alt="">
+                </div>
+                <div id="playlist-creation">
+                    <img src="../img/projects/listentogether/PlaylistCreation.png" alt="">
+                    <h2>Step 2: Playlist creation</h2>
+                    <p>Once both accounts are connected, all the users need to do to create the playlist is click on the 'Create Playlist' button
+                       between the two accounts.</p>
+                    <p>Behind the scenes, the application will go through the libraries of both accounts and create a playlist out of the songs
+                       that can be found in both.</p>
+                    <p>Once this is done, the playlist will be displayed underneath the accounts.</p>
+                    <br>
+                </div>
+                <div id="playlist-save">
+                    <img src="../img/projects/listentogether/lt_thumbnail.png" alt="">
+                    <h2>Step 3: Saving the playlist</h2>
+                    <p>At this point, the created playlist just exists on listentogether. To save the playlist on the Spotify accounts, users
+                       just need to give the playlist a name and click the 'Save' button.</p>
+                </div>
+            </div>
         </div>
-        <div id="content">
-            <p>With listentogether, two Spotify users can connect their accounts and get a playlist out of the tracks both accounts have saved.</p>
-            <p>This project was inspired by my love of roadtrips. Have you ever gone on a roadtrip with other people and not known what music to 
-            play? Sure, introducing each other to new music is always fun, but sometimes you just want to make sure that the music playing is 
-            something that everyone can enjoy.</p>
-            <p>On the front-end, listentogether was created purely with HTML and CSS. The back-end, which is all handled by the browser, is 
-            vanilla JavaScript that obviously makes heavy use of the Spotify API to connect user accounts, retrieve their libraries and save the
-            playlists directly onto their profiles.</p>
-        </div>
-        <div id="external-links">
-            <a href="https://github.com/nickxwong/listentogether" target="_blank">
-                <button>Source Code</button>    
-            </a>
-            <a href="https://nickxwong.github.io/listentogether/" target="_blank">
-                <button>Live Preview</button>    
-            </a>
-            
-        </div>    
-    </div>
-</body>
+    </body>
 </html>

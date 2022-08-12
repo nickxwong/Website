@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Workout Creator</title>
+        <link rel="stylesheet" href="../css/project.css">
+        <link rel="stylesheet" href="../css/workoutcreator.css">
+    </head>
+    <body>
+        <div id="container">
+            <img src="../img/projects/Workout-Creator/wc_thumbnail.png">
+            <h1>Workout Creator</h1>
+            <div id="tech">
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>JavaScript</p>
+                <p>React</p>
+                <p>Express/Node.js</p>
+                <p>MySQL</p>
+            </div>
+            <div id="intro">
+                <p>Like most of the projects I work on, Workout Creator started out as something for personal use.
+                   Lifting weights is a big hobby of mine and I frequently found myself putting together different
+                   lifting plans on Excel. However, things like spreadsheet formatting or coming up with automated
+                   formulas to track the distribution of exercises to muscle groups would end up taking almost as
+                   much time as planning the workouts themselves, so I decided to create a full stack web
+                   application to abstract away the tedious, behind-the-scenes parts.</p>
+                <p>On the front-end, I used HTML, CSS, Javascript, and the React framework. The back-end was
+                   developed with a combination of Express, Node.js, and JavaScript. For persistent storage of
+                   data, such as exercises, user accounts, and saved workouts, a MySQL database was used. The 
+                   entire application is deployed on Heroku.</p>
+            </div>
+            <div id="external-links">
+                <a href="https://github.com/nickxwong/workout-creator" target="_blank">
+                    <button>Source Code</button>    
+                </a>
+                <a href="https://workoutcreator.herokuapp.com/" target="_blank">
+                    <button>Live Preview</button>    
+                </a>
+            </div> 
+            <hr />
+            <div id="walkthrough">
+                <h2>Project walkthrough</h2>
+                <div class="section" id="exercise-list">
+                    <img src="../img/projects/Workout-Creator/ExerciseList.png" alt="">
+                    <div class="content">
+                        <h3>Exercise List</h3>
+                        <p>To create their workouts, users can select from a list of exercises. Each exercise in the
+                           system has one to three target muscle groups, which are listed below the exercise's name.
+                           Users can select a muscle group to filter the list with, allowing for the easy creation of
+                           body part-centric workouts, like a leg day or a chest day.</p>
+                        <p>The exercise list, which is populated from a table on a MySQL database, consists of 
+                           premade exercises that will appear for every user, as well as custom exercises that can be
+                           created by signed-in users.</p>
+                    </div>
+                </div>
+                <div class="section" id="exercise-creator">
+                    <div class="content">
+                        <h3>Exercise Creator</h3>
+                        <p>Custom exercises are linked to user accounts, so they can only be seen and used by the user
+                           who created them. 
+                        </p>
+                    </div>
+                    <img src="../img/projects/Workout-Creator/ExerciseCreator.png" alt="">
+                </div>
+                <div class="section center" id="workout">
+                    <img src="../img/projects/Workout-Creator/Workout.png" alt="">
+                    <div class="content">
+                        <h3>Workout</h3>
+                        <p>Once exercises are selected, the workout can be further customized by adding sets and rep
+                           ranges to each exercise. Exercises can also be rearranged by dragging and dropping rows
+                           into the desired positions. When hovering over each row with a mouse, a trash icon appears
+                           that users can use to remove an exercise if needed.</p>
+                        <p>The distribution of sets per muscle group is tracked automatically and displayed below the
+                           workout. This will make it easier for users to determine if their workouts are properly
+                           balanced.</p>
+                        <p>Above the workout, users can name their workouts and save them to their profiles. Saved
+                           workouts will be listed in the user dashboard. 
+                        </p>
+                    </div>
+                </div>
+                <div class="section" id="dashboard">
+                    <img src="../img/projects/Workout-Creator/Dashboard.png" alt="">
+                    <div class="content">
+                        <h3>User Dashboard</h3>
+                        <p>The dashboard, which can be found by hovering over the user icon in the top right corner,
+                           contains two important features:</p>
+                        <p>The first is a list of the account's saved workouts. Clicking on workout's name will load
+                           it below.</p>
+                        <p>The second is a toggle for dark mode, which can be seen below.</p>
+                    </div>
+                </div>
+                <div class="section center" id="darkmode">
+                    <img src="../img/projects/Workout-Creator/DarkMode.png" alt="">
+                </div>
+            </div>   
+        </div>
+    </body>
+</html>

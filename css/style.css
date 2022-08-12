@@ -124,10 +124,15 @@ section#projects > .project {
     position: relative;
 }
 
-section#projects > .project .thumbnail {
+#section#projects > .project a {
     height: 100%;
     width: 100%;
+}
+
+section#projects > .project .thumbnail {
     transition: 0.3s ease;
+    width: 45vw;
+    height: calc(0.67 * 45vw);
 }
 
 section#projects > .project .thumbnail:hover {
@@ -179,7 +184,7 @@ section#about #skills {
 }
 
 section#about #skills > .container {
-    width: 25em;
+    width: 35em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -191,6 +196,10 @@ section#about #skills .row {
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+
+section#about #skills .row#row-three {
+    width: 60%;
 }
 
 section#about #skills .skill {
@@ -336,6 +345,12 @@ section#footer a {
     }
 
     section#projects > .project {
+        width: 80vw;
+        height: calc(0.67 * 80vw);
+    }
+
+    section#projects > .project .thumbnail {
+        transition: 0.3s ease;
         width: 80vw;
         height: calc(0.67 * 80vw);
     }
