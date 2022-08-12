@@ -13,6 +13,7 @@ body {
 button {
     background: black;
     border: none;
+    cursor: pointer;
     /* Text */
     color: white;
     font-family: 'Rubik', sans-serif;
