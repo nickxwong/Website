@@ -27,19 +27,19 @@
         <div id="website-content">
             <section id="projects">
                 <div class="project" id="project-one">
-                    <a href="./project-one.html">
+                    <a href="workout_creator.html">
                         <img class="thumbnail" src="../img/projects/Workout-Creator/wc_thumbnail.png">
                     </a>
                     <div class="title">Workout Creator</div>
                 </div>
                 <div class="project" id="project-two">
-                    <a href="./project-two.html">
-                        <img class="thumbnail" src="../img/projects//listentogether/lt_thumbnail.png">    
+                    <a href="listentogether.html">
+                        <img class="thumbnail" src="../img/projects/listentogether/lt_thumbnail.png">    
                     </a>
                     <div class="title">listentogether</div>
                 </div>   
                 <div class="project" id="project-three">
-                    <a href="./project-three.html">
+                    <a href="nba_webscraper.html">
                         <img class="thumbnail" src="../img/projects/NBA Webscraper/nws_thumbnail.png">    
                     </a>
                     <div class="title">NBA Webscraper</div>
@@ -119,14 +119,15 @@
                     <div id="resume">
                         <p>And here's my resume if you'd like to learn more about me:</p>
                         <a href="../Resume.pdf" target="_blank">
-                            <button>Resume</button>    
+                            <button>Resume</button>
                         </a>
                     </div>    
                 </div>
             </section>
             <section id="contact">
                 <p>Want to get in touch?</p>
-                <form action="">
+                <iframe name="frame" style="display:none;" onload="handleSubmit()"></iframe> <!-- No redirect on form submit -->
+                <form action="contactform.php" method="POST" target="frame">
                     <div class="row" id="top">
                         <input type="text" id="name-input" name="name" placeholder="Name*" required>
                         <button id="submit-button" type="submit">Send</button>        
@@ -161,7 +162,17 @@
         <!-- JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-        <script src ="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
-        <script src="../script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script src="script.js"></script>
+        <script>
+            function handleSubmit() {
+                alert('Message sent!'); 
+                
+                document.getElementById('name-input').value = "";
+                document.getElementById('email-input').value = "";
+                document.getElementById('message-input').value = "";   
+            }
+        </script>
     </body>
 </html>
