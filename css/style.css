@@ -227,6 +227,7 @@ section#about #resume {
 section#about #resume button {
     width: 5em;
     height: 1.75em;
+    padding: 0;
 }
 
 /* Section: Contact */
