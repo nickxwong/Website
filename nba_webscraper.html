@@ -22,19 +22,18 @@
             <div id="tech">
                 <p>Python</p>
                 <p>BeautifulSoup</p>
+                <p>crontabs</p>
             </div>
             <div id="intro">
                 <p>I've been a fan of basketball and the NBA for close to ten years at this point, but admittedly—with 
                    school and working on programming projects—I haven't had as much time to watch the games recently. So,
                    with full understanding of the irony of the situation, I decided to take on another programming project
                    to help me keep up to date with the league.</p>
-                <p>NBA Webscraper is a Python script that takes a calendar date from user input and presents the scores and 
-                    statistical leaders of the five major categories (points, assists, rebounds, blocks, and steals) for all
-                    the NBA games played on that day. It does so by using a Python library called BeautifulSoup to scrape and 
-                    parse the HTML content of basketball-reference.com.</p>
-                <p>Once the new NBA season starts in October, I intend to automate this program so that it emails me the scores
-                   of the preceding night's games every morning, as well as video highlights and major news items. 
-                </p>
+                <p>NBA Webscraper is an automated Python script that emails me a report of the ongoings of the NBA including a summary
+                   of previous day's games and a collection of the top posts on the r/NBA subreddit. This is achieved using a Python 
+                   library called BeautifulSoup to scrape and parse the HTML content of basketball-reference.com and reddit.com.</p>
+                <p>The script is automated using crontabs, a UNIX-based job scheduler. Every morning at 6am, crontabs will run this
+                   script, so that the report will be in my email inbox by the time I wake up.</p>
             </div>
             <div id="external-links">
                 <a href="https://github.com/nickxwong/listentogether" target="_blank">
