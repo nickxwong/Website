@@ -1,4 +1,4 @@
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger)
 
 // dynamic header based on window position
 ScrollTrigger.create({
@@ -26,6 +26,6 @@ ScrollTrigger.create({
 // ScrollTo animations
 document.querySelectorAll('.header > .link').forEach(link => {
     link.addEventListener('click', () => {
-        gsap.to(window, {scrollTo: `#${link.textContent}`});    
+        gsap.to(window, {scrollTo: `#${link.textContent}`})
     })
 })

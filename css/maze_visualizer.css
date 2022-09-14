@@ -1,0 +1,58 @@
+#walkthrough {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+}
+
+#maze-generation .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25vh;
+}
+
+#maze-generation .intro {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25vh;
+}
+
+#maze-generation .intro .bold {
+    font-weight: bold;
+}
+
+#tabs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 1.25vh;
+}
+
+#tabs .algorithm {
+    text-align: center;
+}
+
+#tabs .algorithm:hover {
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+.selected {
+    border-bottom: 1px solid black;
+}
+
+.visualization {
+    margin-bottom: 2vh;
+}
+
+.visualization,
+.example-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pathfinding .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25vh;
+}

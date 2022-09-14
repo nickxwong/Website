@@ -27,7 +27,7 @@
     width: 50%;
 }
 
-#exercise-list .content {
+.section.right .content {
     text-align: right;
 }
 

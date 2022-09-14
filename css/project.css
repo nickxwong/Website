@@ -110,6 +110,12 @@ hr {
     font-size: 1.8rem;
 }
 
+#walkthrough .content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+}
+
 @media (max-width: 67em) {
     #navigation {
         width: 90vw;

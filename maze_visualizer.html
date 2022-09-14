@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Maze Visualizer</title>
+        <link rel="stylesheet" href="../css/project.css">
+        <link rel="stylesheet" href="../css/maze_visualizer.css">
+    </head>
+    <body>
+        <div id="navigation">
+            <h1>Nicolas Wong</h1>
+            <div id="links">
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+        <div id="container">
+            <img src="../img/projects/Maze-Visualizer/mv_thumbnail.png">
+            <h1>Maze Visualizer</h1>
+            <div id="tech">
+                <p>Java</p>
+                <p>Swing</p>
+            </div>
+            <div id="intro">
+                <p>Maze Visualizer is a Java application I created that is both an algorithm visualizer and a game.
+                   Lately, I've been very interested in the concept of mazes, particularly "perfect" mazes, which
+                   connect any two points by a unique path. In short, this was an opportunity for me to explore
+                   both maze generation and pathfinding algorithms, as well as make a game out of them.</p>
+                <p>First, users generate a maze by selecting from the collection of maze generation algorithms.
+                   While each algorithm creates a perfect maze, they do so in different, visually-apparent ways.
+                   Once the maze is generated, users use their arrow keys to try and get from the top-left corner
+                   of the maze to the bottom-right corner before the application can do the opposite (on a separate
+                   thread, the application will run a pathfinding algorithm to solve the maze itself).</p>
+            </div>
+            <div id="external-links">
+                <a href="https://github.com/nickxwong/Maze-Visualizer" target="_blank">
+                    <button>Source Code</button>    
+                </a>
+            </div> 
+            <hr />
+            <div id="walkthrough">
+                <div id="maze-generation">
+                    <h2>Maze Generation</h2>
+                    <div class="content">
+                        <div class="intro">
+                            <p>Three different algorithms are used to generate mazes: Recursive Backtracking, Eller's Algorithm
+                            and Prim's Algorithm. Each take a grid of squares and converts them into perfect mazes in
+                            their own way.</p>
+                            <p class="bold">Note: The following visualizations of each algorithm were simulated for the purposes of this
+                            project walkthrough. In the actual application, mazes are generated at a much faster pace in
+                            order to not give away the solution of the maze to the user. Furthemore, the mazes in the
+                            application are generated from a 20x20 grid of squares, rather than the 5x5 grids shown here.</p>       
+                        </div>
+                        <div id="tabs">
+                            <div class="algorithm selected" onclick="showContent('recursive-backtracking')">
+                                <p>Recursive Backtracking</p>
+                            </div>
+                            <div class="algorithm" onclick="showContent('ellers-algorithm')">
+                                <p>Eller's Algorithm</p>
+                            </div>
+                            <div class="algorithm" onclick="showContent('prims-algorithm')">
+                                <p>Prim's Algorithm</p>
+                            </div>
+                        </div>
+                        <div id="descriptions">
+                            <div class="description" id="recursive-backtracking">
+                                <div class="visualization">
+                                    <img src="./img/projects/Maze-Visualizer/Recusive-Backtracking.gif" style="width: 50%; border: 1px solid black">
+                                </div>
+                                <div class="content">
+                                    <p>The Recursive Backtracking algorithm starts at a single point (in this case, the top-left corner of the grid)
+                                       and visits a randomly-selected, unvisited neighbor. Once the algorithm moves onto this new cell, the
+                                       previously-visited cell is pushed onto a stack. When the algorithm visits a cell that has no more unvisited
+                                       neighbors, the algorithm backtracks by visited the previous cell (the one on top of the stack). Eventually,
+                                       the algorithm will backtrack all the way to the starting cell, terminating the algorithm and completing the
+                                       maze.</p>
+                                    <p>Once a cell has been visited, it will never be visited again by the algorithm. This prevents any cycles within
+                                       the maze, which would go against the definition of a perfect maze. In comparison to the other algorithms, 
+                                       the mazes generated by the Recursive Backtracking algorithm tend to feature long, sweeping corridors.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="description" id="ellers-algorithm" style="display: none">
+                                <div class="visualization">
+                                    <img src="./img/projects/Maze-Visualizer/Ellers-Algorithm.gif" style="width: 50%; border: 1px solid black; border-top: 0.5px; border-bottom: 0.5px">    
+                                </div>
+                                <div class="content">
+                                    <p>Unlike the Recursive Backtracking algorithm—which starts at a single point, Eller's Algorithm generates the
+                                       maze row-by-row. It places each cell into a set, which it shares with any other cell that it connects to. In
+                                       the first pass-through of each row, cells are placed into their own unique sets or join the set of a neighbor.
+                                       This is what dictates whether there's a horizontal passageway or a wall. On the second pass-through, vertical
+                                       connections are randomly made with the next row down. Each set must have at least one vertical connection.</p>
+                                    <p>As the algorithm runs, the number of sets steadily reduce. Once the maze is completely generated, only one set
+                                       will remain. Since each set consists of all the cells that are connected to each other, this guarantees that
+                                       there exists a single unique path between all the cells.</p>
+                                </div>
+                            </div>
+                            <div class="description" id="prims-algorithm" style="display: none">
+                                <div class="visualization">
+                                    <img src="./img/projects/Maze-Visualizer/Prims-Algorithm.gif" style="width: 50%;">    
+                                </div>
+                                <div class="content">
+                                    <p>With Prim's Algorithm, there are three types of cells. Visited cells (cells that are already part of the maze),
+                                       border cells (cells that are direct neighbors to any of the visited cells), and unvisited cells (any other cells).
+                                       In the visualization above, the border cells have a red background.</p>
+                                    <p>Prim's Algorithm works by first selecting a random cell from the grid and adding any unvisited neighbors into a
+                                       set of border cells. The next visited cell is selected randomly from this set of border cells (it can be any cell
+                                       from the set, not just one that was a direct neighbor to the previously-visited cell) and the wall between it and
+                                       an already-visited cell are removed. If a cell is selected that shares walls with multiple visited cells, only one
+                                       is selected (at random) to be removed. The random nature of cell selection gives the illusion that the maze is growing 
+                                       from different spots within the grid. The algorithm is complete when there are no more cells to select from the set
+                                       of border cells.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="pathfinding">
+                    <h2>Maze Solving (Pathfinding)</h2>
+                    <div class="content">
+                        <p>Once the maze has been generated and the user has started solving the maze, the application will run a pathfinding algorithm
+                           to attempt the maze, as well. The algorithm, in question, is Djikstra's Algorithm.</p>
+                        <div class="example-image">
+                            <img src="./img/projects/Maze-Visualizer/Djikstra/01.svg" style="width: 50%"> 
+                        </div>
+                        <p>The first step of the algorithm is to calculate the distances of each cell from the endpoint. If the endpoint has a distance
+                           of zero, its direct neighbors have a distance of one. The algorithm will start at the endpoint (the bottom-right corner) and
+                           recursively make its way through every cell in the grid until it reaches the starting point (the top-left corner).</p>
+                        <p>In most cases, the algorithm will reach the starting point before it has visited all the cells. This is where the fact that 
+                           we're working with perfect mazes differs from the normal implementation of Djikstra's Algorithm. Since we know that a perfect 
+                           maze connects each cell through a single, unique path, we know that once we find the path we're looking for, we can move onto
+                           the next step of the algorithm. Any more unvisited cells are guaranteed not to lead to the starting point.</p>
+                        <div class="example-image">
+                            <img src="./img/projects/Maze-Visualizer/Djikstra/02.svg" style="width: 50%">
+                        </div>
+                        <p>Once the distances are calculated, the path from the starting point to the end point can easily be calculated. Starting at
+                           the top-left corner, the distances of each direct neighbor are considered. Since the distances of each cell are based on
+                           their distance from the endpoint, the algorithm simply picks the neighbor with lesser distance to visit next. Eventually,
+                           the algorithm will make its way back to the endpoint, revealing the solution to the maze.</p>
+                        <div class="example-image">
+                            <img src="./img/projects/Maze-Visualizer/Djikstra/03.svg" style="width: 50%"> 
+                        </div>
+                        <p>In the application, the first step of the algorithm—where the distances are calculated—is slowed down and visualized in
+                           order to give the user a fair competition. As seen in the demonstration below, user movement is represented in the green
+                           and the cells that the pathfinding algorithm has visited are represented in the purple. Cells that both the user and the
+                           algorithm have both visited are represented in yellow. More often than not, this yellow path represents the solution. We
+                           see that once either the user or the application has completed the maze, a darker yellow path is formed to represent the
+                           solution.
+                        </p>
+                        <div class="visualization">
+                            <img src="./img/projects/Maze-Visualizer/Djikstra/Djikstra-example.gif" style="width: 50%">
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </div>
+        <script src="./js/maze_visualizer.js"></script>
+    </body>
+</html>
